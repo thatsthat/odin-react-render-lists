@@ -7,8 +7,9 @@ class Overview extends Component {
   }
 
   render() {
-    const tasks = Array.from(this.props.tasks);
-    const tasksList = tasks.map((task) => <li key={task}>{task}</li>);
+    const tasksList = this.props.tasks.map((task) => (
+      <li key={task}>{task}</li>
+    ));
     return (
       <div className="Overview">
         <ul>{tasksList}</ul>
